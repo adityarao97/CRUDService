@@ -1,18 +1,66 @@
-# React + Vite
+# Text CRUD App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite frontend application for managing text entries with a RESTful API backend.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Create new text entries
+- View all saved texts in a list
+- Error handling for failed API requests
+- Real-time state management with React hooks
 
-## React Compiler
+## Project Structure
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+```
+src/
+├── api.js              # API service with axios
+├── App.jsx             # Main app component with state management
+├── index.jsx           # Entry point
+└── components/
+    ├── TextForm.jsx    # Form component for creating texts
+    └── TextList.jsx    # List component for displaying texts
+```
 
-Note: This will impact Vite dev & build performances.
+## Setup Instructions
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js and npm installed
+- Backend API running on `http://localhost:5000`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open your browser and navigate to `http://localhost:5173`
+
+## Dependencies
+
+- **react**: UI framework
+- **vite**: Build tool and dev server
+- **axios**: HTTP client for API requests
+
+## API Endpoints
+
+The app communicates with the following backend endpoints:
+
+- `POST /texts` - Create a new text entry
+- `GET /texts` - Retrieve all text entries
+
+## Development
+
+This project uses:
+- **Vite** for fast development and building
+- **ESLint** for code quality
+- **React Compiler** for optimized performance
+
+## Browser DevTools
+
+For better debugging experience, install [React DevTools](https://react.dev/link/react-devtools) browser extension.
