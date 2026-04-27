@@ -58,7 +58,7 @@ pip install -r requirements.txt
 ```
 
 ## 🚀 Getting Started
-
+Create the data folder inside backend if it doesn't exist
 Run the development server:
 ```bash
 python app.py
