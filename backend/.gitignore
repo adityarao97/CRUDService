@@ -36,5 +36,4 @@ wheels/
 .env.*.local
 
 # Database
-data/
-*.db
+data/*.db
